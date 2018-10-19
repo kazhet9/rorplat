@@ -1,1 +1,18 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+body {
+  color: #1c3643;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+nav.navbar {
+  background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);
+  box-shadow: 0 0 5px 1px rgba(66, 88, 97, 0.55);
+  a {
+    color: #fff;
+  }
+}

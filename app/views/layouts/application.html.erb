@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <h1>Yo estaré en todos lados</h1>
-    <%= yield %>
+    <%= render 'partials/navbar' %>
+    <div class="container mt-2">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
