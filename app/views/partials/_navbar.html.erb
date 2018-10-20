@@ -21,7 +21,6 @@
       <li class="nav-item">
         <p class="nav-link">|</p>
       </li>
-      <%# RETO: Pinta a aquí, entre el último nav-link y el botón, el nombre de tu User para que se vea si ha iniciado sesión %>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to('Cerrar sesión', destroy_user_session_path, class: 'btn btn-platzi', method: :delete) %>
