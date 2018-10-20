@@ -12,8 +12,17 @@ body {
 nav.navbar {
   background: -webkit-linear-gradient(0deg, #1c3643 0, #273b47 25%, #1e5372);
   box-shadow: 0 0 5px 1px rgba(66, 88, 97, 0.55);
-  a {
+  a, p {
     color: #fff;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .nav-item {
+    &:last-child {
+      padding-left: .5em;
+      padding-right: 0;
+    }
   }
 }
 
