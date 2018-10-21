@@ -1,32 +1,21 @@
-<%= form_with(model: article, local: true) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="container">
+  <%= form_with(model: article, local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :title, "Título" %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="form-group">
+    <%= f.label :body, "Contenido:" %>
+    <%= f.cktext_area :body, class: 'form-control' %>
   </div>
   <% if user_signed_in? %>
-    <%= form.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <% else %>
-    <%= form.hidden_field :user_id, value: '1' %>
+  <%= f.hidden_field :user_id, value: '1' %>
   <% end %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit 'Publicar', class: 'btn btn-platzi-blue' %>
   </div>
-<% end %>
+  <% end %>
+</div>

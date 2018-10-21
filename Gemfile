@@ -19,6 +19,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem 'ckeditor'
+# gem 'aws-sdk'
+gem 'paperclip'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

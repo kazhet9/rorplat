@@ -61,7 +61,7 @@ nav.navbar {
   }
 }
 
-.btn-platzi {
+.btn-platzi, input.btn-platzi {
   background: -webkit-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
   background: -moz-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
   background: -o-linear-gradient(right, #95ca3e 0%, #95ca3e 50%, #85c638 100%);
@@ -71,7 +71,7 @@ nav.navbar {
   box-shadow: 0 1px 1px 0 #58902d;
 }
 
-.btn-platzi-blue {
+.btn-platzi-blue, input.btn-platzi-blue {
   background: #0791e6;
   background: -webkit-linear-gradient(right, #0791e6 0%, #0791e6 50%, #028be0 100%);
   background: -moz-linear-gradient(right, #0791e6 0%, #0791e6 50%, #028be0 100%);
@@ -80,6 +80,7 @@ nav.navbar {
   background: linear-gradient(to left, #0791e6 0%, #0791e6 50%, #028be0 100%);
   -webkit-box-shadow: 0 1px 1px 0 #00436d;
   box-shadow: 0 1px 1px 0 #00436d;
+  color: #fff;
 }
 
 .jumbotron {
