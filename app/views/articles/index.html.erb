@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.body %></td>
-        <td><%= article.user %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+<div class="row">
+  <div class="col-12">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="article-header">Todos los artículos</h1>
+          </div>
+          <% if user_signed_in? %>
+            <div class="col-12 text-right mt-auto">
+              <%= link_to '<i class="fas fa-plus"></i> Artículo'.html_safe, new_article_path, class: 'btn btn-platzi-blue' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <% @articles.each do |article| %>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="anton"><%= link_to article.title, article %></h2>
+            <hr>
+            <p><%= article.body %></p>
+          </div>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</div>

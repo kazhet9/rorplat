@@ -20,11 +20,11 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+  <% if user_signed_in? %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  <% else %>
+    <%= form.hidden_field :user_id, value: '1' %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
